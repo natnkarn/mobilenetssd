@@ -26,7 +26,7 @@ UPLOAD_FOLDER ='static/uploads/'
 DOWNLOAD_FOLDER = 'static/downloads/'
 ALLOWED_EXTENSIONS = {'jpg', 'png','.jpeg'}
 
-lineaccesstoken = 'https://dialogflow.cloud.google.com/v1/integrations/line/webhook/c654b8fc-9c38-4f77-ab41-c43effa4c406'
+lineaccesstoken = 'sQYxzCmNUxZ2a6Bcs1V7dgOi/VzJw94mynfJ9MzsO5UENDoFIrSN7YelhEjIH14/7mJ3O3CkpI479SxHDXuTrOeNwSheqGvk+UzsRM3HFvVGgZRoxfAeq2gw5bDefH4q1p6d4daje+OJdMrq3EMckAdB04t89/1O/w1cDnyilFU='
 
 line_bot_api = LineBotApi(lineaccesstoken)
 
@@ -168,7 +168,7 @@ def event_handle(event,json_line):
             headers = request.headers
             json_headers = ({k:v for k, v in headers.items()})
             json_headers.update({'Host':'bots.dialogflow.com'})
-            url = "https://dialogflow.cloud.google.com/v1/integrations/line/webhook/164cb123-8d13-413d-9bce-60fa0d6276bc"
+            url = "https://dialogflow.cloud.google.com/v1/integrations/line/webhook/c654b8fc-9c38-4f77-ab41-c43effa4c406"
             requests.post(url,data=json_line, headers=json_headers)
     elif msgType == "image":
         try:
